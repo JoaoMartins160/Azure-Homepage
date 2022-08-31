@@ -3,14 +3,18 @@ html {
     margin: 0;
 }
 
-.navbar {
-    display: flex;
+body {
+    margin: 0;
 }
 
-.navbar:hover {
-    text-decoration: underline;
-    cursor: pointer;
+.navbar {
+    display: flex;
+    width: 1400px;
+    height: 54px;
+    align-items: center;
+    justify-content: space-between;
 }
+
 
 .navbar_comp_1 {
     font-size: 25px;
@@ -20,3 +24,15 @@ html {
     text-align: center;
 }
 
+.navbar_comp_2, .navbar_comp_4, .navbar_comp_5 {
+    padding-top: 20px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+
+.navbar_comp_2:hover, .navbar_comp_3:hover, .navbar_comp_4:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
