@@ -1,0 +1,22 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar_comp_1 {
+    font-size: 25px;
+}
+
+.semi_title {
+    text-align: center;
+}
+
