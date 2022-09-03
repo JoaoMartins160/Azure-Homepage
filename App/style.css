@@ -1,3 +1,7 @@
+html{
+  font-family: 'Segoe UI',SegoeUI,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -7,9 +11,13 @@ body {
   display: flex;
   width: auto;
   height: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1310px;
 }
 .azure {
   display: flex;
+  align-items: center;
 }
 .icone {
   width: 24px;
@@ -17,11 +25,9 @@ body {
 }
 
 .navbar_comp_1 {
-  margin: auto;
-}
-
-.navbar_comp_1 {
-  font-size: 25px;
+  margin-left: 24px; 
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .semi_title {
@@ -35,16 +41,46 @@ body {
   font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
 }
+.green{
+  display: flex;
+  align-items: center;
+  margin: 0 6px;
+}
+.navbar_comp_5{
+  background-color: #89c402;
+  border: 1px solid #6f9e02;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 9px;
+  width: 100%;
+}
+.navbar_comp_5:hover{
+  text-decoration: underline;
+  background-color: #a0df0d;
+  cursor: pointer;
 
+}
+
+.search_form{
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+
+}
+.search{
+  display: flex;
+  max-width: 120px;
+}
 .Pesquisa {
   border-radius: 4px;
-  min-height: 32px;
   background-color: #f8f9fa;
-  border-color: #747479;
   font-size: 13px;
+  min-height: 32px;
   padding-left: 12px;
   padding-right: 24px;
-  width: 120px;
+  border: 1px solid #747479;
+  width: 100%;
 }
 
 .navbar_comp_2:hover,
@@ -58,10 +94,11 @@ body {
 .semi_title {
   background-color: #0078d4;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   padding: 12px 0;
-  font-weight: bold;
+  font-weight: 600;
+  font-family: 'Segoe UI',SegoeUI,'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 button {
@@ -71,6 +108,10 @@ button {
 
 .azure_list {
   margin-right: auto;
+  display: flex;
+  margin-left: 24px;
+}
+.azure_list2{
   display: flex;
 }
 
