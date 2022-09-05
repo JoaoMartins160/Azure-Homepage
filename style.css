@@ -94,7 +94,7 @@ body {
   padding-right: 24px;
   border: 1px solid #747479;
   width: 100%;
-  background: url(../App/images/searching.png) no-repeat right / 16px ;
+  background: url(../images/searching.png) no-repeat right / 16px ;
   background-origin: padding-box;
 }
 
