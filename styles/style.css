@@ -1,5 +1,5 @@
 @media (max-width:1079px){
-  .azure_list2,.search_form,.navbar_comp_5,.navbar_comp_4,.Pesquisa{
+ #responsivity{
     display: none;
   }
 }
@@ -47,14 +47,27 @@ body {
   text-align: center;
 }
 
-.navbar_comp_2,
-.navbar_comp_4,
-.navbar_comp_5,
-.navbar_comp_6 {
+.generic_navbar_comp {
   padding: 20px 8px;
   font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
+  display: flex ;
 }
+
+.Azure-text{
+  font-weight: bold;
+  font-size: medium;
+}
+
+.arrow{
+  height: 8px;
+  width: 8px;
+  display: flex;
+  justify-content: right;
+  margin-left: 4px;
+  margin-top: 5px;
+}
+
 .green {
   display: flex;
   align-items: center;
@@ -94,14 +107,11 @@ body {
   padding-right: 24px;
   border: 1px solid #747479;
   width: 100%;
-  background: url(../Web-Project/Images/searching.png) no-repeat right / 16px ;
+  background: url(../Assets/searching.png) no-repeat right / 16px ;
   background-origin: padding-box;
 }
 
-.navbar_comp_2:hover,
-.navbar_comp_3:hover,
-.navbar_comp_4:hover,
-.navbar_comp_6 {
+.generic_navbar_comp:hover {
   text-decoration: underline;
   cursor: pointer;
   align-items: center;
