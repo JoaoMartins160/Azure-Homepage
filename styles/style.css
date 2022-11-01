@@ -4,6 +4,12 @@
   }
 }
 
+@media (max-width:767px){
+  #responsivity2{
+    display: none;
+  }
+}
+
 html {
   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -26,10 +32,27 @@ body {
 .navbar {
   display: flex;
   width: auto;
-  height: 54px;
+  height: 66px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1310px;
+}
+
+.navbar-mobile{
+  max-width: 767px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburguer{
+  height: 30px;
+  width: 30px;
+}
+
+.icone-mobile{
+  height: 30px;
+  width: 30px;
 }
 
 .icone {
@@ -52,6 +75,11 @@ body {
   font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   display: flex ;
+  align-items: center;
+}
+
+.login{
+  margin-right: auto;
 }
 
 .Azure-text{
@@ -114,7 +142,6 @@ body {
 .generic_navbar_comp:hover {
   text-decoration: underline;
   cursor: pointer;
-  align-items: center;
 }
 
 .semi_title {
@@ -138,7 +165,8 @@ body {
     height: 18px;
     width: 18px;
     transform: scaleX(-1);
-    margin-right: 20px;
+    margin-right: 10px;
+    cursor: pointer;
   }
   }
 
