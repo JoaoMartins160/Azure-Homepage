@@ -40,14 +40,27 @@ body {
 
 .navbar-mobile{
   max-width: 767px;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
 }
 
+@media (max-width:767px){
+  .navbar-mobile{
+     display: flex;
+   }
+ }
+
 .hamburguer{
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
+  align-items: center;
+}
+
+.hamburguer-button{
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
 }
 
 .icone-mobile{
@@ -58,6 +71,7 @@ body {
 .icone {
   width: 24px;
   height: 25px;
+  padding-right: 5px;
 }
 
 .navbar_comp_1 {
@@ -71,7 +85,7 @@ body {
 }
 
 .generic_navbar_comp {
-  padding: 20px 8px;
+  padding: 20px 8px 20px 0px;
   font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   display: flex ;
@@ -85,6 +99,8 @@ body {
 .Azure-text{
   font-weight: bold;
   font-size: medium;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .arrow{
@@ -183,6 +199,7 @@ button {
 }
 .azure_list2 {
   display: flex;
+  align-items: center;
 }
 
 .mass_container {
@@ -191,6 +208,13 @@ button {
   width: 100%;
   margin: 0 auto;
   outline: 0;
+}
+
+@media (max-width:767px){
+  .mass_container {
+    display: flex;
+    text-align: center;
+  }
 }
 
 .azure_picture {
@@ -231,6 +255,14 @@ button {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   position: relative;
+}
+
+@media (max-width:767px){
+  .column_itens {
+    width: 95%;
+    float: none;
+    padding: auto;
+  }
 }
 
 .back2_itens {
@@ -294,6 +326,7 @@ button {
   padding-left: 0;
 }
 
+
 li {
   margin-right: 24px;
   margin-top: 12px;
@@ -344,3 +377,112 @@ li {
   text-decoration: underline;
   cursor: pointer;
 }
+
+@media (max-width:48em){
+  .list_2 {
+    flex-direction: column;
+    display: block;
+  }
+}
+
+@media (max-width:48em){
+  .test,.introduction{
+    width: 85%;
+
+  }
+}
+
+.popup{
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(1.25);
+  width: 380px;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  transition: top 0ms ease-in-out 200ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 20ms ease-in-out 0ms;
+}
+
+.popup.active{
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%,-50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 200ms ease-in-out 0ms;
+}
+
+.popup .close-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: #888;
+  color: #eee;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.popup .form h2{
+  text-align: center;
+  color: #222;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+}
+
+.popup .form .form-element{
+  margin: 15px 0px;
+}
+
+.popup .form .form-element label{
+  font-size: 14px;
+  color: #222;
+}
+
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"] {
+
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.popup .form .form-element input[type="checkbox"]{
+  margin-right: 5px;
+}
+
+.popup .form .form-element button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #222;
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.popup .form .form-element a{
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  color: #1a79ca;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+
