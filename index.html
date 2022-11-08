@@ -51,9 +51,9 @@
       <a class="Azure-text">Azure</a>
     </div>
       <img src="./Assets/microsoft.png" class="icone-mobile">
-      <div class="generic_navbar_comp">
+      <div class="generic_navbar_comp" id="Show-Login">
       <button><img src="./Assets/search.png" class="Media-button"></button>
-      <button class="generic_navbar_comp" id="Show-Login">Entrar</button>
+      <button class="login" id="Show-Login">Entrar</button>
       </div>
     </div>
   </header>
@@ -106,27 +106,24 @@
 
     <div class="popup">
       <div class="close-btn">&times;</div>
-      <div class="form">
+      <form class="form">
         <h2>Log in</h2>
         <div class="form-element">
           <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Enter email">
+          <input name="email" type="text" id="email" placeholder="Enter email">
         </div>
         <div class="form-element">
         <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter password">
+        <input name="password" type="password" id="password" placeholder="Enter password">
       </div>
       <div class="form-element">
         <input type="checkbox" id="remember-me">
         <label for="remember-me">Lembrar me</label>
       </div>
       <div class="form-element">
-        <button>Conectar</button>
+        <button type="submit" class="logado">Conectar</button>
       </div>
-      <div class="form-element">
-        <a href="#">Esqueci minha senha</a>
-      </div>
-      </div>
+      </form>
     </div>
   </body>
   <script src="./scripts/script.js"></script>
