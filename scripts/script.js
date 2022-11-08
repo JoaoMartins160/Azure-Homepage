@@ -4,6 +4,10 @@ document.querySelector("#Show-Login").addEventListener("click",function(){
     document.querySelector(".popup").classList.add("active");
 });
 
+document.querySelector("#Show-Login2").addEventListener("click",function(){
+    document.querySelector(".popup").classList.add("active");
+});
+
 document.querySelector(".popup .close-btn").addEventListener("click",function(){
     document.querySelector(".popup").classList.remove("active");
 });
@@ -21,12 +25,7 @@ formEl.addEventListener('submit', event =>{
     }).then(function(Response){
         console.log(Response.status);
         if(Response.ok){
-            localStorage.setItem("acesso", true);
-
-            document.querySelector(".popup .logado").addEventListener("click",async function(){
-                document.querySelector(".popup").classList.remove("active");
-            });
-            
+            localStorage.setItem("acesso", true);     
           }else{
             alert("tenta de novo amigão");
           }
@@ -37,3 +36,26 @@ formEl.addEventListener('submit', event =>{
       
 });
 
+function logout(){
+    
+
+}
+
+function popupsome(){
+    document.querySelector(".popup .logado").addEventListener("click",function(){
+        document.querySelector(".popup").classList.remove("active");
+    });
+
+}
+
+const unit = document.querySelector("#btn-university")
+
+unit.addEventListener('submit',(e)=>{
+    const options ={
+        method: 'GET',
+    }
+    fetch(`http://universities.hipolabs.com/search?name=${search}`, options).then(response =>{
+        response.json()
+        .then(data => console.log(data))
+    }).catch(e => console.log('Deu Erro:' + e,message))
+})
