@@ -97,6 +97,11 @@ body {
   cursor: pointer;
 }
 
+#alerta{
+  color: #8c1515;
+  text-align: center;
+}
+
 .Azure-text{
   font-weight: bold;
   font-size: medium;

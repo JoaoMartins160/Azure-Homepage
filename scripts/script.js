@@ -1,4 +1,5 @@
 const formEl = document.querySelector('.form');
+var count = 0;
 
 document.querySelector("#Show-Login").addEventListener("click",function(){
     document.querySelector(".popup").classList.add("active");
@@ -23,30 +24,41 @@ formEl.addEventListener('submit', event =>{
         method: 'Post',
         body: data
     }).then(function(Response){
-        console.log(Response.status);
         if(Response.ok){
             localStorage.setItem("acesso", true);     
           }else{
-            alert("tenta de novo amigão");
+            const p = document.createElement("p");
+            p.innerText = "Email ou Senha incorreta";
+            document.getElementById("alerta").appendChild(p);
+            count +=1;
+
           }
           return Response.json();
-      })
+      }).then(function(){
+        if(localStorage.getItem("acesso") == true){
+        document.querySelector(".popup .logado").addEventListener("click",function(){
+            document.querySelector(".popup").classList.remove("active");
+        });
+         }
+     })
       .catch(error => console.log(error));
      
       
 });
+
+function revp(){
+   if(count >= 1){
+    const Element = document.getElementById("alerta");
+     Element.removeChild(Element.firstChild);
+     count = 0;
+}
+}
 
 function logout(){
     
 
 }
 
-function popupsome(){
-    document.querySelector(".popup .logado").addEventListener("click",function(){
-        document.querySelector(".popup").classList.remove("active");
-    });
-
-}
 
 const unit = document.querySelector("#btn-university")
 
